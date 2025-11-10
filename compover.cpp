@@ -17,6 +17,18 @@ class Complex {
     double mag() const {
         return sqrt(real * real + imaginary * imaginary);
     }
+    
+    bool operator<(const Complex& other) const {
+        return mag() <other.mag();
+    }
+
+    bool operator>(const Complex& other) const {
+        return other < *this;
+    }
+
+    bool operator>=(const Complex& other) const {
+        return !(*this < other);
+    }
 };
 
 
