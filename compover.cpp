@@ -10,8 +10,15 @@ class Complex {
 
     public:
     Complex(double r = 0.0, double i = 0.0) : real(r), imaginary(i) {}
-}
-int main ();
+    void display() const {
+        std::cout << real << "+" <<imaginary << "i" << std::endl;
+    }
+
+    double mag() const {
+        return sqrt(real * real + imaginary * imaginary);
+    }
+};
+
 
 
 
